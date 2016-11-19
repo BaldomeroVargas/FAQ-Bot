@@ -1,4 +1,5 @@
 #include "entry.h"
+#include <iostream>
 
 //comstructor definitions
 Entry::Entry(){
@@ -44,3 +45,8 @@ void Entry::SetCluster(const int C){
 	cluster = C;
 }
 
+void Entry::printEntry(){
+	cout << question << endl;
+	cout << answer << endl;
+	cout << cluster << endl;
+}

@@ -33,5 +33,8 @@ class Entry{
 		void SetQuestion(const string Q);
 		void SetAnswer(const string A);
 		void SetCluster(const int C);
+
+		//other
+		void printEntry();
 };
 #endif
