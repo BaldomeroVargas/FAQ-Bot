@@ -25,9 +25,9 @@ class Entry{
 		~Entry();
 
 		//accessors
-		const string GetQuestion();
-		const string GetAnswer();
-		const int GetCluster();
+		string GetQuestion() const;
+		string GetAnswer() const;
+		int GetCluster() const;
 		
 		//modifiers
 		void SetQuestion(const string Q);

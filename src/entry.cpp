@@ -20,15 +20,15 @@ Entry::~Entry(){
 }
 
 //accessors definitions
-const string Entry::GetQuestion(){
+string Entry::GetQuestion() const{
 	return question;
 }
 
-const string Entry::GetAnswer(){
+string Entry::GetAnswer() const{
 	return answer;
 }
 
-const int Entry::GetCluster(){
+int Entry::GetCluster() const{ 
 	return cluster;
 }
 
