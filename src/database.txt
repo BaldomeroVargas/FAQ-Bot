@@ -1,0 +1,11 @@
+How many planets are in the solar system?
+There are 9 planets.
+1
+
+What color is Mars?
+Mars is red.
+332
+
+What color is Neptune?
+Neptune is blue.
+7
