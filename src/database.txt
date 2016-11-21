@@ -9,3 +9,15 @@ Mars is red.
 What color is Neptune?
 Neptune is blue.
 7
+
+What is Mars?
+Mars is a Planet.
+1
+
+Where is Earth?
+Earth is in the Milkiway.
+1
+
+What is the sun?
+The sun is a Star.
+1

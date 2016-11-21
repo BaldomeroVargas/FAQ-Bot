@@ -6,6 +6,7 @@
 #include <sstream>
 #include <vector>
 #include "entry.h"
+#include "dice.h"
 
 //function to import the database to be used from the txr file
 void importDataBase(vector<Entry> & db, const char* db_name){
@@ -77,6 +78,41 @@ void export_DataBase(const vector<Entry> &  db, const char* db_name){
 	}
 
 	output.close();
+}
+
+void sortDatabase(vector<Entry> db){
+	vector<Entry> temp;
+	temp.push_back(db.at(0));
+	db.erase(db.begin());
+	while(db.size() != 0){
+		int max = 0;
+		int next = 0;
+		for(int i = 0; i < temp.size(); ++i){
+			char* tmp = new char[temp.at(i).GetQuestion().length()];
+			for(int k = 0; k < temp.at(i).GetQuestion().length(); ++k){
+				tmp[k] = temp.at(i).GetQuestion().at(k);
+			}
+			for(int j = 0; j < db.size(); ++j){
+				char* tmp2 = new char[db.at(j).GetQuestion().length()];
+				for(int k = 0; k < db.at(j).GetQuestion().length(); ++k){
+					tmp2[k] = db.at(j).GetQuestion().at(k);
+				}
+				int curr = dice_match(tmp, tmp2);
+				if(curr > max){
+					max = curr;
+					next = j;
+				}
+			}
+		}
+		temp.push_back(db.at(next));
+		db.erase(db.begin() + next);
+	}
+	for(int i = 0; i < temp.size(); ++i){
+		cout << temp.at(i).GetQuestion() << endl;
+		cout << temp.at(i).GetAnswer() << endl;
+		cout << temp.at(i).GetCluster() << endl;
+	}
+	return;
 }
 
 #endif
