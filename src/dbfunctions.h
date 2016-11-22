@@ -10,6 +10,8 @@
 #include "dice.h"
 #include "levenshteinDistance.h"
 
+string remove(string);
+
 //function to import the database to be used from the txr file
 void importDataBase(vector<Entry> & db, const char* db_name){
 	
@@ -92,7 +94,7 @@ void sortDatabase(vector<Entry>& db){
 		int next = 0;
 		for(int i = 0; i < temp.size(); ++i){
 			copy = remove(temp.at(i).GetQuestion());
-			char* tmp = new char[copy..length()];
+			char* tmp = new char[copy.length()];
 			for(int k = 0; k < copy.length(); ++k){
 				tmp[k] = copy.at(k);
 			}
@@ -130,7 +132,7 @@ string remove(string parse){
 	int tmp;
 	for(int i = 0; i < BOW.size(); ++i){
 		while(parse.find(BOW.at(i)) != string::npos){
-			pasre.erase(parse.find(BOW.at(i)i), BOW.at(i).size()); 
+			parse.erase(parse.find(BOW.at(i)), BOW.at(i).size()); 
 		}
 	}
 	cout << parse << endl;
