@@ -44,11 +44,11 @@ Jupiter is the biggest planet.
 
 What is the smallest planet?
 Pluto is the smallest planet.
+88
 
 What is the biggest thing in the Milkiway?
 The sun is the biggest thing in the Milkiway.
 40
-
 
 How many sun are in the Milkiway?
 There is 1 sun in the Milkiway.
@@ -85,7 +85,4 @@ No you would burn to ashes and be obliterated instantly.
 Can I stand on a gas planet?
 No, you would sink down and be crushed by the intense pressure inside the planet.
 999
-
-
-
 
