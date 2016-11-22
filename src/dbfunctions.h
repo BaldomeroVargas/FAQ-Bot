@@ -11,7 +11,9 @@
 #include "levenshteinDistance.h"
 
 //bag of words contaioner
-const vector <string> BOW = {"is", "the", "are"}; 
+const string BOW[3] = {"is", "the", "are"};
+const int BOW_SIZE = 3;
+
 string remove(string);
 
 //function to import the database to be used from the txr file
