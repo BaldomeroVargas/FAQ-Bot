@@ -161,7 +161,6 @@ string remove(string parse){
 			parse.erase(parse.find(BOW[i]), BOW[i].size()); 
 		}
 	}
-	cout << parse << endl;
 	return parse;
 }
 

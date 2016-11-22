@@ -2,17 +2,13 @@ How many planets are in the solar system?
 There are 9 planets.
 1
 
+What is the smallest planet?
+Pluto is the smallest planet.
+88
+
 Which planet has the most moons?
 Jupiter has the most at 181.
 181
-
-Is Mars a gas planet?
-Mars is not a gas planet it is a rock.
-43
-
-Does Earth have moons?
-Yes it has 1.
-43
 
 If I stand on the sun would I live?
 No you would burn to ashes and be obliterated instantly.
@@ -58,10 +54,6 @@ Can I stand on a gas planet?
 No, you would sink down and be crushed by the intense pressure inside the planet.
 999
 
-What is the smallest planet?
-Pluto is the smallest planet.
-88
-
 What is the sun?
 The sun is a Star.
 1
@@ -81,8 +73,4 @@ There are 5 gas planets.
 What planets have people living in them?
 Only Earth has people.
 44
-
-Which planets have water on them?
-Only Earth has water.
-43
 
