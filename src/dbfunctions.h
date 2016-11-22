@@ -68,7 +68,7 @@ void importDataBase(vector <vector<Entry>> & db, const char* db_name){
 						group.push_back(current);
 					}
 					else{
-						temp.push_back(group);
+						db.push_back(group);
 						group.clear();
 						group.push_back(current);
 					}
