@@ -17,7 +17,8 @@ int main(int argc, char** argv){
 
 	string input;
 	//test output
-	/*for(int i = 0; i < DataBase.size(); ++i){
+/*
+	for(int i = 0; i < DataBase.size(); ++i){
 		cout << DataBase.at(i).GetQuestion() << endl;
 		cout << DataBase.at(i).GetAnswer() << endl;
 		cout << DataBase.at(i).GetCluster () << endl;
@@ -25,13 +26,14 @@ int main(int argc, char** argv){
 	}*/
 	sortDatabase(DataBase);
 	cout << "Ask me a question." << endl;
+	/*
 	while(true){
 		getline(cin, input);
 		// should be changed to something that chackes the distance to every cluster and then
 		// if it is in the same cluster it outputs the most similar response. if not it asks if you want to move topics.
 		//if yes it will output the most similar response from that clustor and update current cluster.
 		cout << input << endl;
-	}
+	}*/
 
 	/*for(int i = 0; i < DataBase.size(); ++i){
 		char* tmp = new char[DataBase.at(i).GetQuestion().length()];
