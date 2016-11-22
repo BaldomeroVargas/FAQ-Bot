@@ -10,11 +10,20 @@
 #include "dice.h"
 #include "levenshteinDistance.h"
 
+//bag of words contaioner
+const vector <string> BOW = {"is", "the", "are"}; 
 string remove(string);
 
 //function to import the database to be used from the txr file
-void importDataBase(vector<Entry> & db, const char* db_name){
+void importDataBase(vector <vector<Entry>> & db, const char* db_name){
+
+
+	//temp cluster
+	vector <Entry> group;
 	
+	//flag for first entry
+	bool init_flag = 1;
+
 	ifstream input;
 	input.open(db_name);
 	//error check with file opening
@@ -49,8 +58,23 @@ void importDataBase(vector<Entry> & db, const char* db_name){
 				int numb;
 				istringstream(element) >> numb;
 				current.SetCluster(numb);
+				//cluster construction cases
+				if(init_flag){
+					group.push_back(current);
+					init_flag = 0;
+				}
+				else{
+					if(group.at(0).cluster == numb){
+						group.push_back(current);
+					}
+					else{
+						db.push_back(group);
+						group.clear();
+						group.push_back(current);
+					}
+		
+				}
 				itt = 0;
-				db.push_back(current);
 				break;
 			//should not get here	
 			default:
