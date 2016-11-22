@@ -10,8 +10,8 @@ int main(int argc, char** argv){
 		return -1;
 	}
 
-	//importing data base
-	vector <Entry> DataBase;
+	//importing data base in clusters
+	vector < vector<Entry> > DataBase;
 	importDataBase(DataBase, argv[1]);
 
 	/*string input;
