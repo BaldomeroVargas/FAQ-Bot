@@ -80,7 +80,7 @@ void export_DataBase(const vector<Entry> &  db, const char* db_name){
 	output.close();
 }
 
-void sortDatabase(vector<Entry> db){
+void sortDatabase(vector<Entry>& db){
 	vector<Entry> temp;
 	temp.push_back(db.at(0));
 	db.erase(db.begin());
@@ -107,6 +107,8 @@ void sortDatabase(vector<Entry> db){
 		temp.push_back(db.at(next));
 		db.erase(db.begin() + next);
 	}
+	db = temp;
+	export_DataBase(db, "database.txt");
 	for(int i = 0; i < temp.size(); ++i){
 		cout << temp.at(i).GetQuestion() << endl;
 		cout << temp.at(i).GetAnswer() << endl;

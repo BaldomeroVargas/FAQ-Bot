@@ -22,8 +22,8 @@ int main(int argc, char** argv){
 		cout << DataBase.at(i).GetAnswer() << endl;
 		cout << DataBase.at(i).GetCluster () << endl;
 		cout << endl;
-	}
-	sortDatabase(DataBase);*/
+	}*/
+	sortDatabase(DataBase);
 	cout << "Ask me a question." << endl;
 	while(true){
 		getline(cin, input);
