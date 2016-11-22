@@ -33,26 +33,5 @@ int main(int argc, char** argv){
 		//if yes it will output the most similar response from that clustor and update current cluster.
 		cout << input << endl;
 	}*/
-
-	for(int i = 0; i < DataBase.size(); ++i){
-		char* tmp = new char[DataBase.at(i).GetQuestion().length()];
-		for(int k = 0; k < DataBase.at(i).GetQuestion().length(); ++k){
-			tmp[k] = DataBase.at(i).GetQuestion().at(k);
-		}
-		tmp[DataBase.at(i).GetQuestion().length()] = '\0';
-		for(int j = i; j < DataBase.size(); ++j){
-			char* tmp2 = new char[DataBase.at(j).GetQuestion().length()];
-			for(int k = 0; k < DataBase.at(j).GetQuestion().length(); ++k){
-				tmp2[k] = DataBase.at(j).GetQuestion().at(k);
-			}
-			tmp2[DataBase.at(j).GetQuestion().length()] = '\0';
-			cout << DataBase.at(i).GetQuestion() << endl;
-			cout << DataBase.at(j).GetQuestion() << endl;
-			cout << "Distance: " << dice_match(tmp, tmp2) << endl << endl;
-			delete tmp2;
-		}
-		delete tmp;
-	}
 	return 0;
-
 }
