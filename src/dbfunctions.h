@@ -7,6 +7,7 @@
 #include <vector>
 #include "entry.h"
 #include "dice.h"
+#include "levenshteinDistance.h"
 
 //function to import the database to be used from the txr file
 void importDataBase(vector<Entry> & db, const char* db_name){
@@ -80,7 +81,7 @@ void export_DataBase(const vector<Entry> &  db, const char* db_name){
 	output.close();
 }
 
-void sortDatabase(vector<Entry> db){
+void sortDatabase(vector<Entry>& db){
 	vector<Entry> temp;
 	temp.push_back(db.at(0));
 	db.erase(db.begin());
@@ -97,7 +98,7 @@ void sortDatabase(vector<Entry> db){
 				for(int k = 0; k < db.at(j).GetQuestion().length(); ++k){
 					tmp2[k] = db.at(j).GetQuestion().at(k);
 				}
-				int curr = dice_match(tmp, tmp2);
+				int curr = distance(tmp, tmp2);
 				if(curr > max){
 					max = curr;
 					next = j;
@@ -107,12 +108,18 @@ void sortDatabase(vector<Entry> db){
 		temp.push_back(db.at(next));
 		db.erase(db.begin() + next);
 	}
+	db = temp;
+	export_DataBase(db, "database.txt");
 	for(int i = 0; i < temp.size(); ++i){
 		cout << temp.at(i).GetQuestion() << endl;
 		cout << temp.at(i).GetAnswer() << endl;
 		cout << temp.at(i).GetCluster() << endl;
 	}
 	return;
+}
+
+int distance(char* one, char* two){
+	return levenshteinDistance(one, two) + dice_match(one, two);
 }
 
 #endif
