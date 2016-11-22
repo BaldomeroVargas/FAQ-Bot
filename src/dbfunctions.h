@@ -17,7 +17,7 @@ const int BOW_SIZE = 3;
 string remove(string);
 
 //function to import the database to be used from the txr file
-void importDataBase(vector <vector<Entry>> & db, const char* db_name){
+void importDataBase(vector <vector<Entry> >& db, const char* db_name){
 
 
 	//temp cluster
@@ -66,7 +66,7 @@ void importDataBase(vector <vector<Entry>> & db, const char* db_name){
 					init_flag = 0;
 				}
 				else{
-					if(group.at(0).cluster == numb){
+					if(group.at(0).GetCluster() == numb){
 						group.push_back(current);
 					}
 					else{
@@ -156,9 +156,9 @@ int distance(char* one, char* two){
 
 string remove(string parse){
 	int tmp;
-	for(int i = 0; i < BOW.size(); ++i){
-		while(parse.find(BOW.at(i)) != string::npos){
-			parse.erase(parse.find(BOW.at(i)), BOW.at(i).size()); 
+	for(int i = 0; i < BOW_SIZE; ++i){
+		while(parse.find(BOW[i]) != string::npos){
+			parse.erase(parse.find(BOW[i]), BOW[i].size()); 
 		}
 	}
 	cout << parse << endl;

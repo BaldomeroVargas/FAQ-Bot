@@ -23,7 +23,6 @@ int main(int argc, char** argv){
 		cout << DataBase.at(i).GetCluster () << endl;
 		cout << endl;
 	}*/
-	sortDatabase(DataBase);
 	cout << "Ask me a question." << endl;
 	/*
 	while(true){
