@@ -21,9 +21,6 @@ class Entry{
 		Entry();
 		Entry(const string Q, const string A, const int C);
 
-		//destructor
-		~Entry();
-
 		//accessors
 		string GetQuestion() const;
 		string GetAnswer() const;

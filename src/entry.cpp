@@ -14,11 +14,6 @@ Entry::Entry(const string Q, const string A, const int C){
 	cluster = C;
 }
 
-//destructor definition
-Entry::~Entry(){
-	//what to do here??
-}
-
 //accessors definitions
 string Entry::GetQuestion() const{
 	return question;

@@ -1,5 +1,4 @@
 #include "dbfunctions.h"
-#include <iostream>
 
 using namespace std;
 
@@ -15,7 +14,7 @@ int main(int argc, char** argv){
 	vector <Entry> DataBase;
 	importDataBase(DataBase, argv[1]);
 
-	string input;
+	/*string input;
 	//test output
 	for(int i = 0; i < DataBase.size(); ++i){
 		cout << DataBase.at(i).GetQuestion() << endl;
@@ -23,7 +22,7 @@ int main(int argc, char** argv){
 		cout << DataBase.at(i).GetCluster () << endl;
 		cout << endl;
 	}
-	sortDatabase(DataBase);
+	sortDatabase(DataBase);*/
 	/*cout << "Ask me a question." << endl;
 	while(true){
 		getline(cin, input);
@@ -33,7 +32,7 @@ int main(int argc, char** argv){
 		cout << input << endl;
 	}*/
 
-	/*for(int i = 0; i < DataBase.size(); ++i){
+	for(int i = 0; i < DataBase.size(); ++i){
 		char* tmp = new char[DataBase.at(i).GetQuestion().length()];
 		for(int k = 0; k < DataBase.at(i).GetQuestion().length(); ++k){
 			tmp[k] = DataBase.at(i).GetQuestion().at(k);
@@ -51,7 +50,7 @@ int main(int argc, char** argv){
 			delete tmp2;
 		}
 		delete tmp;
-	}*/
+	}
 	return 0;
 
 }
