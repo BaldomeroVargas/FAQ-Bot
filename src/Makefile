@@ -6,5 +6,8 @@ cluster: main.cpp entry.h dbfunctions.h entry.cpp dice.h
 	g++ -c entry.cpp
 	g++ cluster.cpp entry.o
 
+run:
+	./a.out database.txt
+
 clean:
 	rm ./a.out *.o
