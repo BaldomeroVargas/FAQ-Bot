@@ -60,12 +60,15 @@ void importDataBase(vector <vector<Entry> >& db, const char* db_name){
 				int numb;
 				istringstream(element) >> numb;
 				current.SetCluster(numb);
+
 				//cluster construction cases
+				//initial entry starts as own cluster
 				if(init_flag){
 					group.push_back(current);
 					init_flag = 0;
 				}
 				else{
+					//if entry is part of current cluster
 					if(group.at(0).GetCluster() == numb){
 						group.push_back(current);
 					}
@@ -85,6 +88,13 @@ void importDataBase(vector <vector<Entry> >& db, const char* db_name){
 		}
 	}
 	input.close();
+	
+	//push last cluster once EOF
+	db.push_back(group);
+
+	//test the size
+	cout << db.size() << endl;
+
 }
 
 //outputs database into file
