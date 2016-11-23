@@ -6,6 +6,7 @@
 #include <sstream>
 #include <vector>
 #include <string>
+#include <boost/tokenizer.hpp>
 #include "entry.h"
 #include "dice.h"
 #include "levenshteinDistance.h"
@@ -155,13 +156,9 @@ int distance(char* one, char* two){
 }
 
 string remove(string parse){
-	int tmp;
-	for(int i = 0; i < BOW_SIZE; ++i){
-		while(parse.find(BOW[i]) != string::npos){
-			parse.erase(parse.find(BOW[i]), BOW[i].size()); 
-		}
+	tokenizer<> tok(parse);
+	for(tokenizer<>::iterator beg=tok.begin(); beg!=tok.end();++beg){
+		cout << *beg << "\n";
 	}
-	return parse;
 }
-
 #endif
