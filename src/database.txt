@@ -2,87 +2,87 @@ How many planets are in the solar system?
 There are 9 planets.
 1
 
-Is a moon technically a planet?
-No moons are basically huge rocks by definition.
-17
-
-Which planets have water on them?
-Only Earth has water.
-7
-
-What color is Neptune?
-Neptune is blue.
-3
-
-What is Mars?
-Mars is a Planet.
-4
-
-Where is Earth?
-Earth is in the Milkiway.
-5
-
-What is the sun?
-The sun is a Star.
-6
-
-How many gas planets are there in the solar system?
-There are 5 gas planets.
-8
-
-Is Mars a gas planet?
-Mars is not a gas planet it is a rock.
-9
-
-What planets have people living in them?
-Only Earth has people.
-10
-
 What is the biggest planet?
 Jupiter is the biggest planet.
 11
-
-What is the smallest planet?
-Pluto is the smallest planet.
-12
-
-What is the biggest thing in the Milkiway?
-The sun is the biggest thing in the Milkiway.
-13
 
 How many sun are in the Milkiway?
 There is 1 sun in the Milkiway.
 14
 
-Does Earth have moons?
-Yes it has 1.
-15
+What is the biggest thing in the Milkiway?
+The sun is the biggest thing in the Milkiway.
+13
 
-Which planet has the most moons?
-Jupiter has the most at 181.
-16
+What is the sun?
+The sun is a Star.
+6
 
-Where is the asteroid belt?
-Between Mars and Jupiter.
-18
-
-How hot is the sun?
-The sun measures at 5,777 kelvin at its surface.
-19
-
-What color is the sun?
-The sun is many colors due to the chemical composition.
-20
-
-If I stand on the sun would I live?
-No you would burn to ashes and be obliterated instantly.
-21
+What is the smallest planet?
+Pluto is the smallest planet.
+12
 
 Can I stand on a gas planet?
 No, you would sink down and be crushed by the intense pressure inside the planet.
 22
 
+Where is the asteroid belt?
+Between Mars and Jupiter.
+18
+
+What is Mars?
+Mars is a Planet.
+4
+
+What planets have people living in them?
+Only Earth has people.
+10
+
+Where is Earth?
+Earth is in the Milkiway.
+5
+
+Is Mars a gas planet?
+Mars is not a gas planet it is a rock.
+9
+
+If I stand on the sun would I live?
+No you would burn to ashes and be obliterated instantly.
+21
+
+How hot is the sun?
+The sun measures at 5,777 kelvin at its surface.
+19
+
+How many gas planets are there in the solar system?
+There are 5 gas planets.
+8
+
+Does Earth have moons?
+Yes it has 1.
+15
+
+What color is the sun?
+The sun is many colors due to the chemical composition.
+20
+
 What color is Mars?
 Mars is red.
 2
+
+Which planet has the most moons?
+Jupiter has the most at 181.
+16
+
+Is a moon technically a planet?
+No moons are basically huge rocks by definition.
+17
+
+What color is Neptune?
+Neptune is blue.
+3
+
+Which planets have water on them?
+Only Earth has water.
+7
 

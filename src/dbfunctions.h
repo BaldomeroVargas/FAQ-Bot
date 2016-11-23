@@ -94,7 +94,7 @@ void importDataBase(vector <vector<Entry> >& db, const char* db_name){
 	db.push_back(group);
 
 	//test the size
-	cout << db.size() << endl;
+	//cout << db.size() << endl;
 
 }
 
@@ -136,7 +136,7 @@ void sortDatabase(vector<Entry>& db){
 				tmp[k] = copy.at(k);
 			}
 			for(int j = 0; j < db.size(); ++j){
-				copy = db.at(j).GetQuestion().length();
+				copy = remove(db.at(j).GetQuestion());
 				char* tmp2 = new char[copy.length()];
 				for(int k = 0; k < copy.length(); ++k){
 					tmp2[k] = copy.at(k);
@@ -166,9 +166,24 @@ int distance(char* one, char* two){
 }
 
 string remove(string parse){
-	tokenizer<> tok(parse);
-	for(tokenizer<>::iterator beg=tok.begin(); beg!=tok.end();++beg){
-		cout << *beg << "\n";
+	boost::tokenizer<> tok(parse);
+	vector <string> tmp;
+	for(boost::tokenizer<>::iterator beg=tok.begin(); beg!=tok.end();++beg){
+		tmp.push_back(*beg);
 	}
+	for(int i = 0; i < tmp.size(); ++i){
+		for(int j = 0; j < BOW_SIZE; ++j){
+			if(tmp.at(i) == BOW[j]){
+				tmp.erase(tmp.begin()+i);
+				--i;
+				break;
+			}
+		}
+	}
+	parse = "";
+	for(int i = 0; i < tmp.size(); ++i){
+		parse += tmp.at(i) + ' ';
+	}
+	return parse;
 }
 #endif
