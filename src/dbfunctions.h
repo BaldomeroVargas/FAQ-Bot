@@ -121,6 +121,21 @@ void export_DataBase(const vector<Entry> &  db, const char* db_name){
 	output.close();
 }
 
+
+//function to return a list of one entry from each cluster
+//used for initial comparision metrics
+vector <Entry> sample_list(const vector< vector <Entry> > & db){
+
+	vector<Entry> cluster_sample;
+
+	for(int i = 0; i < db.size(); ++i){
+		cluster_sample.push_back(db.at(i).at(0));
+	}
+
+	return cluster_sample;
+
+}
+
 void sortDatabase(vector<Entry>& db){
 	vector<Entry> temp;
 	temp.push_back(db.at(0));

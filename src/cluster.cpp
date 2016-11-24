@@ -2,6 +2,7 @@
 
 using namespace std;
 
+
 int main(int argc, char** argv){
 
 	//arguement count error check
@@ -13,12 +14,23 @@ int main(int argc, char** argv){
 	//importing data base in clusters
 	vector < vector<Entry> > DataBase;
 	importDataBase(DataBase, argv[1]);
-	vector <Entry> tmp;
+
+	//sample get singe entry from each cluster
+	//in dbfunctions
+	vector<Entry> db_cluster;
+	db_cluster = sample_list(DataBase);
+
+	for(int i = 0; i <db_cluster.size(); ++i){
+		db_cluster.at(i).printEntry();
+	}
+
+
+	/*vector <Entry> tmp;
 	for(int i = 0; i  < DataBase.size(); ++i){
 		for(int j = 0; j < DataBase.at(i).size(); ++j){
 			tmp.push_back(DataBase.at(i).at(j));
 		}
 	}
-	sortDatabase(tmp);
+	sortDatabase(tmp);*/
 	return 0;
 }
