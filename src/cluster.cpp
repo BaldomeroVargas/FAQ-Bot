@@ -25,12 +25,12 @@ int main(int argc, char** argv){
 	}
 
 
-	/*vector <Entry> tmp;
+	vector <Entry> tmp;
 	for(int i = 0; i  < DataBase.size(); ++i){
 		for(int j = 0; j < DataBase.at(i).size(); ++j){
 			tmp.push_back(DataBase.at(i).at(j));
 		}
 	}
-	sortDatabase(tmp);*/
+	sortDatabase(tmp);
 	return 0;
 }
