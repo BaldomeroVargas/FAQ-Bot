@@ -99,7 +99,7 @@ void importDataBase(vector <vector<Entry> >& db, const char* db_name){
 }
 
 //outputs database into file
-void export_DataBase(const vector<Entry> &  db, const char* db_name){
+void export_DataBase(const vector<Entry>  db, const char* db_name){
 
 	ofstream output;
 	output.open(db_name);
@@ -109,10 +109,9 @@ void export_DataBase(const vector<Entry> &  db, const char* db_name){
 		cout << "Error opening file.\n";
 		exit(-1);
 	}
-
+	
 	//outputing database to file
 	for(int i = 0; i < db.size(); ++i){
-		cout << i << endl;
 		output << db.at(i).GetQuestion() << endl;
 		output << db.at(i).GetAnswer() << endl;
 		output << db.at(i).GetCluster() << endl;
@@ -120,6 +119,7 @@ void export_DataBase(const vector<Entry> &  db, const char* db_name){
 	}
 
 	output.close();
+	return;
 }
 
 
@@ -137,7 +137,7 @@ vector <Entry> sample_list(const vector< vector <Entry> > & db){
 
 }
 
-void sortDatabase(vector<Entry> & db){
+void sortDatabase(vector<Entry>& db){
 	vector<Entry> temp;
 	temp.push_back(db.at(0));
 	db.erase(db.begin());
@@ -228,6 +228,8 @@ void cluster(vector<Entry> db){
 		}
 	}
 	export_DataBase(db, "database.txt");
+	cout << "wtf" << endl;
+	return;
 }
 
 string remove(string parse){

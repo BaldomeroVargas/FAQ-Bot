@@ -33,5 +33,6 @@ int main(int argc, char** argv){
 	}
 	sortDatabase(tmp);
 	cluster(tmp);
+	cout << "done" << endl;
 	return 0;
 }
