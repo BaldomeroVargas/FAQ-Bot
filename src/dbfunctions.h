@@ -200,7 +200,7 @@ void cluster(vector<Entry> db){
 			tmp2[k] = copy.at(k);
 		}
 		tmp[copy.length()] = '\0';
-		if(dice_match(tmp, tmp2) > 50){
+		if(dice_match(tmp, tmp2) > 45){
 			temp.push_back(db.at(i));
 			delete tmp2;
 		}
@@ -222,7 +222,7 @@ void cluster(vector<Entry> db){
 		temp.at(j).SetCluster(clusterCnt);
 		newDB.push_back(temp.at(j));
 	}
-	export_DataBase(temp, "database.txt");
+	export_DataBase(newDB, "database.txt");
 }
 
 string remove(string parse){
