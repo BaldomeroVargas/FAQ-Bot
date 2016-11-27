@@ -112,6 +112,7 @@ void export_DataBase(const vector<Entry> &  db, const char* db_name){
 
 	//outputing database to file
 	for(int i = 0; i < db.size(); ++i){
+		cout << i << endl;
 		output << db.at(i).GetQuestion() << endl;
 		output << db.at(i).GetAnswer() << endl;
 		output << db.at(i).GetCluster() << endl;
@@ -165,9 +166,9 @@ void sortDatabase(vector<Entry> & db){
 					max = curr;
 					next = j;
 				}
-				delete tmp2;
+				//delete tmp2;
 			}
-			delete tmp;
+			//delete tmp;
 		}
 		temp.push_back(db.at(next));
 		db.erase(db.begin() + next);
@@ -184,7 +185,6 @@ void sortDatabase(vector<Entry> & db){
 
 void cluster(vector<Entry> db){
 	vector<Entry> temp;
-	vector<Entry> newDB;
 	int clusterCnt = 0;
 	string copy;
 	temp.push_back(db.at(0));
@@ -200,29 +200,34 @@ void cluster(vector<Entry> db){
 			tmp2[k] = copy.at(k);
 		}
 		tmp[copy.length()] = '\0';
-		if(dice_match(tmp, tmp2) > 45){
+		if(dice_match(tmp, tmp2) > 50){
 			temp.push_back(db.at(i));
-			delete tmp2;
+			//delete tmp2;
 		}
 		else{
 			for(int j = 0; j < temp.size(); ++j){
-				temp.at(j).SetCluster(clusterCnt);
-				newDB.push_back(temp.at(j));
+				for(int k = 0; k < db.size(); ++k){
+					if(temp.at(j).GetQuestion() == db.at(k).GetQuestion()){
+						db.at(k).SetCluster(clusterCnt);
+					}
+				}
 			}
 			++clusterCnt;
 			while(!temp.empty()) temp.pop_back();
 			temp.push_back(db.at(i));
-			++i;
-			copy = remove(temp.at(0).GetQuestion());
-			delete tmp;
+			copy = remove(db.at(i).GetQuestion());
+			//delete tmp;
 			tmp = tmp2;
 		}
 	}
 	for(int j = 0; j < temp.size(); ++j){
-		temp.at(j).SetCluster(clusterCnt);
-		newDB.push_back(temp.at(j));
+		for(int k = 0; k < db.size(); ++k){
+			if(temp.at(j).GetQuestion() == db.at(k).GetQuestion()){
+				db.at(k).SetCluster(clusterCnt);
+			}
+		}
 	}
-	export_DataBase(newDB, "database.txt");
+	export_DataBase(db, "database.txt");
 }
 
 string remove(string parse){
