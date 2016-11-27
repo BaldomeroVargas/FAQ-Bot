@@ -32,5 +32,6 @@ int main(int argc, char** argv){
 		}
 	}
 	sortDatabase(tmp);
+	cluster(tmp);
 	return 0;
 }

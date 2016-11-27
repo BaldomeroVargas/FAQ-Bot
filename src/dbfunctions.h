@@ -136,7 +136,7 @@ vector <Entry> sample_list(const vector< vector <Entry> > & db){
 
 }
 
-void sortDatabase(vector<Entry>& db){
+void sortDatabase(vector<Entry> & db){
 	vector<Entry> temp;
 	temp.push_back(db.at(0));
 	db.erase(db.begin());
@@ -146,38 +146,83 @@ void sortDatabase(vector<Entry>& db){
 		int next = 0;
 		for(int i = 0; i < temp.size(); ++i){
 			copy = remove(temp.at(i).GetQuestion());
-			char* tmp = new char[copy.length()];
+			char* tmp = new char[copy.length() + 1];
 			for(int k = 0; k < copy.length(); ++k){
 				tmp[k] = copy.at(k);
 			}
+			tmp[copy.length()] = '\0';
 			for(int j = 0; j < db.size(); ++j){
 				copy = remove(db.at(j).GetQuestion());
-				char* tmp2 = new char[copy.length()];
+				char* tmp2 = new char[copy.length() + 1];
 				for(int k = 0; k < copy.length(); ++k){
 					tmp2[k] = copy.at(k);
 				}
-				int curr = distance(tmp, tmp2);
+				for(int k = 0; k < copy.length(); ++k){
+				}
+				tmp2[copy.length()] = '\0';
+				int curr = dice_match(tmp, tmp2);
 				if(curr > max){
 					max = curr;
 					next = j;
 				}
+				delete tmp2;
 			}
+			delete tmp;
 		}
 		temp.push_back(db.at(next));
 		db.erase(db.begin() + next);
 	}
 	db = temp;
 	export_DataBase(db, "database.txt");
-	for(int i = 0; i < temp.size(); ++i){
+	/*for(int i = 0; i < temp.size(); ++i){
 		cout << temp.at(i).GetQuestion() << endl;
 		cout << temp.at(i).GetAnswer() << endl;
 		cout << temp.at(i).GetCluster() << endl;
-	}
+	}*/
 	return;
 }
 
-int distance(char* one, char* two){
-	return dice_match(one, two);
+void cluster(vector<Entry> db){
+	vector<Entry> temp;
+	vector<Entry> newDB;
+	int clusterCnt = 0;
+	string copy;
+	temp.push_back(db.at(0));
+	copy = remove(temp.at(0).GetQuestion());
+	char* tmp = new char[copy.length() + 1];
+	for(int k = 0; k < copy.length(); ++k){
+		tmp[k] = copy.at(k);
+	}
+	for(int i = 1; i< db.size(); ++i){
+		copy = remove(db.at(i).GetQuestion());
+		char* tmp2 = new char[copy.length() + 1];
+		for(int k = 0; k < copy.length(); ++k){
+			tmp2[k] = copy.at(k);
+		}
+		tmp[copy.length()] = '\0';
+		if(dice_match(tmp, tmp2) > 50){
+			temp.push_back(db.at(i));
+			delete tmp2;
+		}
+		else{
+			for(int j = 0; j < temp.size(); ++j){
+				temp.at(j).SetCluster(clusterCnt);
+				newDB.push_back(temp.at(j));
+			}
+			++clusterCnt;
+			while(!temp.empty()) temp.pop_back();
+			temp.push_back(db.at(i));
+			++i;
+			copy = remove(temp.at(0).GetQuestion());
+			delete tmp;
+			tmp = tmp2;
+		}
+	}
+	for(int j = 0; j < temp.size(); ++j){
+		temp.at(j).SetCluster(clusterCnt);
+		newDB.push_back(temp.at(j));
+	}
+	export_DataBase(temp, "database.txt");
 }
 
 string remove(string parse){
