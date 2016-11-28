@@ -199,7 +199,7 @@ void cluster(vector<Entry> db){
 		for(int k = 0; k < copy.length(); ++k){
 			tmp2[k] = copy.at(k);
 		}
-		tmp[copy.length()] = '\0';
+		tmp2[copy.length()] = '\0';
 		if(dice_match(tmp, tmp2) > 50){
 			temp.push_back(db.at(i));
 			//delete tmp2;
@@ -230,6 +230,16 @@ void cluster(vector<Entry> db){
 	export_DataBase(db, "database.txt");
 	cout << "wtf" << endl;
 	return;
+}
+
+char* make_c_str(string str){
+	string copy = remove(str);
+	char* tmp2 = new char[copy.length() + 1];
+	for(int k = 0; k < copy.length(); ++k){
+		tmp2[k] = copy.at(k);
+	}
+	tmp2[copy.length()] = '\0';
+	return tmp2;
 }
 
 string remove(string parse){
