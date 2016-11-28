@@ -16,6 +16,7 @@ const string BOW[3] = {"is", "the", "are"};
 const int BOW_SIZE = 3;
 
 string remove(string);
+char* make_c_str(string);
 
 //function to import the database to be used from the txr file
 void importDataBase(vector <vector<Entry> >& db, const char* db_name){
@@ -146,21 +147,9 @@ void sortDatabase(vector<Entry>& db){
 		int max = 0;
 		int next = 0;
 		for(int i = 0; i < temp.size(); ++i){
-			copy = remove(temp.at(i).GetQuestion());
-			char* tmp = new char[copy.length() + 1];
-			for(int k = 0; k < copy.length(); ++k){
-				tmp[k] = copy.at(k);
-			}
-			tmp[copy.length()] = '\0';
+			char* tmp = make_c_str(temp.at(i).GetQuestion());
 			for(int j = 0; j < db.size(); ++j){
-				copy = remove(db.at(j).GetQuestion());
-				char* tmp2 = new char[copy.length() + 1];
-				for(int k = 0; k < copy.length(); ++k){
-					tmp2[k] = copy.at(k);
-				}
-				for(int k = 0; k < copy.length(); ++k){
-				}
-				tmp2[copy.length()] = '\0';
+				char* tmp2 = make_c_str(db.at(j).GetQuestion());
 				int curr = dice_match(tmp, tmp2);
 				if(curr > max){
 					max = curr;
@@ -188,18 +177,9 @@ void cluster(vector<Entry> db){
 	int clusterCnt = 0;
 	string copy;
 	temp.push_back(db.at(0));
-	copy = remove(temp.at(0).GetQuestion());
-	char* tmp = new char[copy.length() + 1];
-	for(int k = 0; k < copy.length(); ++k){
-		tmp[k] = copy.at(k);
-	}
+	char* tmp = make_c_str(temp.at(0).GetQuestion());
 	for(int i = 1; i< db.size(); ++i){
-		copy = remove(db.at(i).GetQuestion());
-		char* tmp2 = new char[copy.length() + 1];
-		for(int k = 0; k < copy.length(); ++k){
-			tmp2[k] = copy.at(k);
-		}
-		tmp2[copy.length()] = '\0';
+		char* tmp2 = make_c_str(db.at(i).GetQuestion());
 		if(dice_match(tmp, tmp2) > 50){
 			temp.push_back(db.at(i));
 			//delete tmp2;
@@ -228,7 +208,6 @@ void cluster(vector<Entry> db){
 		}
 	}
 	export_DataBase(db, "database.txt");
-	cout << "wtf" << endl;
 	return;
 }
 
