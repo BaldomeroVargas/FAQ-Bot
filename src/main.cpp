@@ -24,7 +24,8 @@ int main(int argc, char** argv){
 		cout << DataBase.at(i).GetCluster () << endl;
 		cout << endl;
 	}*/
-
+	int curr = -1;
+	string response;
 	cout << "Ask me a question." << endl;
 	while(true){
 		getline(cin, input);
@@ -32,7 +33,19 @@ int main(int argc, char** argv){
 		// if it is in the same cluster it outputs the most similar response. if not it asks if you want to move topics.
 		//if yes it will output the most similar response from that clustor and update current cluster.
 		int cluster =  find_cluster(sample, input);
-		cout << find_entry(DataBase.at(cluster), input) << endl;
+		if(cluster != curr && curr != -1){
+			cout << "Are you sure you want to change topics? (yes or no)" << endl;
+			getline(cin, response);
+			if (response == "yes"){
+				cout << find_entry(DataBase.at(cluster), input) << endl;
+				curr = cluster;
+			}
+			else cout << "ask another question" << endl;
+		}
+		else{
+			curr = cluster;
+			cout << find_entry(DataBase.at(cluster), input) << endl;
+		}
 	}
 	return 0;
 }
