@@ -10,79 +10,79 @@ What is the smallest planet?
 Pluto is the smallest planet.
 1
 
-Which planet has the most moons?
+What planet has the most moons?
 Jupiter has the most at 181.
+1
+
+Can I stand on a gas planet?
+No, you would sink down and be crushed by the intense pressure inside the planet.
+2
+
+Is Mars a gas planet?
+Mars is not a gas planet it is a rock.
 2
 
 Which planets have water on them?
 Only Earth has water.
-2
+3
 
 What planets have people living in them?
 Only Earth has people.
 3
 
-Is a moon technically a planet?
-No moons are basically huge rocks by definition.
-4
-
-Can I stand on a gas planet?
-No, you would sink down and be crushed by the intense pressure inside the planet.
-5
-
-Is Mars a gas planet?
-Mars is not a gas planet it is a rock.
-5
-
 How many gas planets are there in the solar system?
 There are 5 gas planets.
-6
+4
 
 How many planets are in the solar system?
 There are 9 planets.
-6
+4
+
+Is a moon technically a planet?
+No moons are basically huge rocks by definition.
+5
 
 How many sun are in the Milkiway?
 There is 1 sun in the Milkiway.
-7
+6
 
 What is Mars?
 Mars is a Planet.
-8
+7
 
 What color is Mars?
 Mars is red.
-8
+7
 
 What color is the sun?
 The sun is many colors due to the chemical composition.
-9
+8
 
 What color is Neptune?
 Neptune is blue.
-9
+8
 
 What is the sun?
 The sun is a Star.
-9
+8
 
 How hot is the sun?
 The sun measures at 5,777 kelvin at its surface.
-10
+9
 
 If I stand on the sun would I live?
 No you would burn to ashes and be obliterated instantly.
-11
+10
 
 Does Earth have moons?
 Yes it has 1.
-12
+11
 
 Where is Earth?
 Earth is in the Milkiway.
-13
+12
 
 Where is the asteroid belt?
 Between Mars and Jupiter.
-14
+13
 
