@@ -22,7 +22,8 @@ int main(int argc, char** argv){
 		cout << DataBase.at(i).GetAnswer() << endl;
 		cout << DataBase.at(i).GetCluster () << endl;
 		cout << endl;
-	}*/
+	}
+
 	cout << "Ask me a question." << endl;
 	while(true){
 		getline(cin, input);
@@ -30,6 +31,6 @@ int main(int argc, char** argv){
 		// if it is in the same cluster it outputs the most similar response. if not it asks if you want to move topics.
 		//if yes it will output the most similar response from that clustor and update current cluster.
 		cout << input << endl;
-	}
+	}*/
 	return 0;
 }

@@ -9,7 +9,6 @@
 #include <boost/tokenizer.hpp>
 #include "entry.h"
 #include "dice.h"
-#include "levenshteinDistance.h"
 
 //bag of words contaioner
 const string BOW[3] = {"is", "the", "are"};
