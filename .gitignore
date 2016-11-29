@@ -1,2 +1,1 @@
-src/*.o
-src/a.out
+src/bin
