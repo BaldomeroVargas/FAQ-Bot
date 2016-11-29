@@ -1,17 +1,13 @@
-How many planets are in the solar system?
-There are 9 planets.
+What is the biggest thing in the Milkiway?
+The sun is the biggest thing in the Milkiway.
 0
 
-How many gas planets are there in the solar system?
-There are 5 gas planets.
-0
-
-Is Mars a gas planet?
-Mars is not a gas planet it is a rock.
+What is the biggest planet?
+Jupiter is the biggest planet.
 1
 
-Can I stand on a gas planet?
-No, you would sink down and be crushed by the intense pressure inside the planet.
+What is the smallest planet?
+Pluto is the smallest planet.
 1
 
 Which planet has the most moons?
@@ -30,59 +26,63 @@ Is a moon technically a planet?
 No moons are basically huge rocks by definition.
 4
 
-What is the biggest planet?
-Jupiter is the biggest planet.
+Can I stand on a gas planet?
+No, you would sink down and be crushed by the intense pressure inside the planet.
 5
 
-What is the smallest planet?
-Pluto is the smallest planet.
+Is Mars a gas planet?
+Mars is not a gas planet it is a rock.
 5
 
-What is the biggest thing in the Milkiway?
-The sun is the biggest thing in the Milkiway.
-5
+How many gas planets are there in the solar system?
+There are 5 gas planets.
+6
+
+How many planets are in the solar system?
+There are 9 planets.
+6
 
 How many sun are in the Milkiway?
 There is 1 sun in the Milkiway.
-6
+7
 
 What is Mars?
 Mars is a Planet.
-7
+8
 
 What color is Mars?
 Mars is red.
-7
+8
 
 What color is the sun?
 The sun is many colors due to the chemical composition.
-8
+9
 
 What color is Neptune?
 Neptune is blue.
-8
+9
 
 What is the sun?
 The sun is a Star.
-8
+9
 
 How hot is the sun?
 The sun measures at 5,777 kelvin at its surface.
-9
+10
 
 If I stand on the sun would I live?
 No you would burn to ashes and be obliterated instantly.
-10
+11
 
 Does Earth have moons?
 Yes it has 1.
-11
+12
 
 Where is Earth?
 Earth is in the Milkiway.
-12
+13
 
 Where is the asteroid belt?
 Between Mars and Jupiter.
-13
+14
 

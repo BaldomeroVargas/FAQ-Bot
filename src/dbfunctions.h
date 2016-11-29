@@ -179,7 +179,7 @@ void cluster(vector<Entry> db){
 	char* tmp = make_c_str(temp.at(0).GetQuestion());
 	for(int i = 1; i< db.size(); ++i){
 		char* tmp2 = make_c_str(db.at(i).GetQuestion());
-		if(dice_match(tmp, tmp2) > 50){
+		if(dice_match(tmp, tmp2) >55 ){
 			temp.push_back(db.at(i));
 			//delete tmp2;
 		}
@@ -240,5 +240,31 @@ string remove(string parse){
 		parse += tmp.at(i) + ' ';
 	}
 	return parse;
+}
+
+int find_cluster(vector <Entry> sample, string input){
+	int max = 0;
+	int cluster = -1;
+	for(int i = 0; i < sample.size(); ++i){
+		int tmp = dice_match(make_c_str(input), make_c_str(sample.at(i).GetQuestion()));
+		if(tmp > max){
+			cluster = i;
+			max = tmp;
+		}
+	}
+	return cluster;
+}
+
+string find_entry(vector<Entry> lookup, string input){
+	int max = 0;
+	string closest;
+	for(int i = 0; i < lookup.size(); ++i){
+		int tmp = dice_match(make_c_str(input), make_c_str(lookup.at(i).GetQuestion()));
+		if(tmp > max){
+			max = tmp;
+			closest = lookup.at(i).GetAnswer();
+		}
+	}
+	return closest;
 }
 #endif
